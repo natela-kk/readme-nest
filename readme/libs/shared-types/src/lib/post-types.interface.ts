@@ -5,7 +5,7 @@ export interface PostVideo {
 
 export interface PostText {
   name: string;
-  Announcement: string;
+  announcement: string;
   text: string;
 }
 
