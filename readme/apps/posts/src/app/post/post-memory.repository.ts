@@ -9,11 +9,7 @@ export class PostMemoryRepository implements CRUDRepository<PostEntity, string, 
   private repository: { [key: string]: Post } = {};
 
   public async findById(id: string): Promise<Post> {
-    console.log(id);
-    console.log(this.repository[id])
-
     if (this.repository[id]) {
-      console.log(this.repository[id])
       return { ...this.repository[id] };
     }
 
@@ -23,7 +19,6 @@ export class PostMemoryRepository implements CRUDRepository<PostEntity, string, 
   public async create(item: PostEntity): Promise<Post> {
     const entry = { ...item.toObject(), _id: crypto.randomUUID() }
     this.repository[entry._id] = entry;
-    console.log(this.repository);
     return { ...entry };
   }
 

@@ -11,7 +11,9 @@ export interface Post {
   postCreationDate: Date;
   postDate: Date;
   reposted: boolean;
-  likesCount: number;
+  initialId?: string;
+  initialAuthor?: string;
+  likesCount: string[];
   commentList: Comment[];
   tags?: string[];
   content: PostVideo | PostText | PostQuote | PostPhoto | PostLink;

@@ -8,7 +8,9 @@ export class PostEntity implements Post {
   postCreationDate: Date;
   postDate: Date;
   reposted: boolean;
-  likesCount: number;
+  initialId?: string;
+  initialAuthor?: string;
+  likesCount: string[];
   commentList: Comment[];
   tags?: string[];
   content: PostVideo | PostText | PostQuote | PostPhoto | PostLink;
@@ -29,12 +31,11 @@ export class PostEntity implements Post {
     this.postCreationDate = post.postCreationDate;
     this.postDate = post.postDate;
     this.reposted = post.reposted;
+    this.initialId = post.initialId;
+    this.initialAuthor = post.initialAuthor;
     this.likesCount = post.likesCount;
     this.commentList = post.commentList;
     this.tags = post.tags;
     this.content = post.content;
-    console.log(this);
-    console.log('entity 37');
-
   }
 }

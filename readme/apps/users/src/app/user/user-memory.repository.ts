@@ -31,7 +31,6 @@ export class UserMemoryRepository implements CRUDRepository<UserEntity, string, 
   public async create(item: UserEntity): Promise<User> {
     const entry = { ...item.toObject(), _id: crypto.randomUUID() }
     this.repository[entry._id] = entry;
-    console.log(this.repository);
     return { ...entry };
   }
 
