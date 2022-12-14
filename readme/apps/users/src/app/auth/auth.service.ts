@@ -24,7 +24,7 @@ export class AuthService {
     const { email, name, password, avatar } = dto;
 
     const user: User = {
-      _id: '', email, name, passwordHash: '', avatar, regDate: dayjs().toDate()
+      _id: '1', email, name, passwordHash: '', avatar, regDate: dayjs().toDate()
     }
 
     const existUser = await this.userRepository.findByEmail(email);
@@ -34,6 +34,7 @@ export class AuthService {
     }
 
     const userEntity = new UserEntity(user);
+    console.log(userEntity);
     await userEntity.setPassword(password);
 
     return this.userRepository.create(userEntity);

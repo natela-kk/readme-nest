@@ -21,7 +21,9 @@ export class AuthController {
     description: 'The new user has been succesfull created'
   })
   async create(@Body() dto: CreateUserDto) {
+    console.log(dto)
     const newUser = await this.authService.register(dto);
+    console.log(newUser)
     return fillObject(UserRdo, newUser);
   }
 
