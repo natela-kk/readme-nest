@@ -30,7 +30,7 @@ export class UserEntity implements User {
   }
 
   public fillEntity(user: User) {
-    this._id = user._id;
+    // this._id = user._id;
     this.avatar = user.avatar;
     this.email = user.email;
     this.name = user.name;

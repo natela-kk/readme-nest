@@ -17,14 +17,13 @@ export class AuthService {
     @Inject(databaseConfig.KEY)
     private readonly mongoConfig: ConfigType<typeof databaseConfig>,
   ) {
-    console.log(mongoConfig.password);
   }
 
   async register(dto: CreateUserDto) {
     const { email, name, password, avatar } = dto;
 
     const user: User = {
-      _id: '1', email, name, passwordHash: '', avatar, regDate: dayjs().toDate()
+      email, name, passwordHash: '', avatar, regDate: dayjs().toDate()
     }
 
     const existUser = await this.userRepository.findByEmail(email);
@@ -34,7 +33,6 @@ export class AuthService {
     }
 
     const userEntity = new UserEntity(user);
-    console.log(userEntity);
     await userEntity.setPassword(password);
 
     return this.userRepository.create(userEntity);
