@@ -53,7 +53,6 @@ export class PostController {
   async like(@Body() dto: LikePostDto, @Param('id') id: string) {
     const { userId } = dto;
     const likedPost = await this.postService.like(id, userId);
-    console.log(userId);
     return fillObject(PostRdo, likedPost);
   }
 
