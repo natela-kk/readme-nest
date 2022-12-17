@@ -5,7 +5,7 @@ Content-Type: application/json
 {
   "email": "max@notfound.local",
   "name": "max",
-  "password": "123456"
+  "password": "test"
 }
 
 ###
@@ -21,7 +21,7 @@ Content-Type: application/json
 
 {
   "email": "use@notfound.local",
-  "password": "123456"
+  "password": "test"
 }
 
 ###
