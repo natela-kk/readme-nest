@@ -3295,7 +3295,7 @@ var ExifRestore = function () {
   _createClass(ExifRestore, null, [{
     key: "initClass",
     value: function initClass() {
-      this.KEY_STR = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+      this.KEY_STR = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0test789+/=';
     }
   }, {
     key: "encode64",

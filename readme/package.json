@@ -21,6 +21,7 @@
     "class-validator": "^0.13.2",
     "dayjs": "^1.11.6",
     "mongoose": "^6.8.0",
+    "prisma": "^4.8.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.0.0",
     "tslib": "^2.3.0"
